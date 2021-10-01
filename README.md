@@ -6,6 +6,7 @@
 # Database
 DATABASE NAME
 # Author(s)
-AUTHOR1
-AUTHOR2
+Shaun Kollannur
+Judhajit Roy
+Charles Edge
 # Database description
