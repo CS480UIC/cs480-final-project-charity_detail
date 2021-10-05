@@ -1,12 +1,22 @@
 ## Table of Contents
 1. [Database](#database)
-1. [Author(s)](#author)
-1. [Database description](#description)
+2. [Authors](#authors)
+3. [Database description](#database-description)
  
 # Database
-DATABASE NAME
-# Author(s)
-Shaun Kollannur
-Judhajit Roy
-Charles Edge
-# Database description
+charity
+
+# Authors
+Shaun Kollannur (shauniop)  
+Judhajit Roy (Judhajit-Roy)  
+Charles Edge (CharlesE96)  
+
+# Database Description
+Entities in the database  
+i. user  
+ii. charity_details  
+iii. campaigns  
+iv. task  
+v.   
+vi.  
+vii. login_user  
