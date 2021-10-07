@@ -2,22 +2,28 @@
 
 # Entities
 
+Entity Name: login_user
+
+Synonyms: account, login, user
+
+Description: A login_user is an account that represents an user of the website. A login_user will consist of an user id, an username, a password, and the user type.
+
 Entity Name: charity_organization
 
-Synonyms: Not For Profit (NFP), trust
+Synonyms: not for profit (NFP), trust
 
 Description: An organization whose goal is to provide services for social well-being.
 A charity_organization will have a cause, address where they are located and the amount of donations they have raised.
 
-Entity Name: Campaign
+Entity Name: campaign
 
-Synonyms: Mission, Movement
+Synonyms: mission, movement
 
 Description: Charity organizations can run many campaigns for different intended target_regions. Each campaign will have a name and the time the campaign is ran for (start_date and end_date)
 
-Entity Name: Task
+Entity Name: task
 
-Synonyms: Job, duty
+Synonyms: job, duty
 
 Description: Campaigns can consist of many different tasks. A task is the service that the campaign seeks to provide. A task will have an id, name, description, and a campaignId that represents the campaign the task is associated with.
 
@@ -27,13 +33,13 @@ Synonyms: activity, progress
 
 Description: Each task will have one task_status. A task_status will describe the state of an associated task. A task_status will have an id, status, and the number of participants.
 
-Entity Name: Donation
+Entity Name: donation
 
 Synonyms: contribution, gift, assistance
 
 Description: A donation is made to a charity_organization. A donation will consist of an id, the name of the donor, the id of the charity it is contributing to and the amount of the donation (in USD).
 
-Entity Name: Volunteer
+Entity Name: volunteer
 
 Synonyms: participant, social worker
 
