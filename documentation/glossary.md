@@ -1,4 +1,6 @@
-# Glossary
+## Glossary
+
+# Entities
 
 Entity Name: charity_organization
 
