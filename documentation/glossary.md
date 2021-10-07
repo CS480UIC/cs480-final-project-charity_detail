@@ -73,19 +73,13 @@ volunteer_hasa_login_user (M(0) to 1(1))
 
 # Attributes
 
-i. login_user : user_id 1-1(1), user_name 1-1(1) ,password 1-1(1), user_type M-1(1)
+i. login_user : user_id 1-1(1), user_name 1-1(1) ,password 1-1(1), user_type M-1(1)  
+ii. charity_organization: id 1-1(1), name 1-1(1), cause 1-1(1), address 1-1(0), target_region_id M-1(0)  
+iii. campaign: id 1-1(1), charity_id M-1(1), name M-1(1), start_date M-1(1), end_date M-1(0), target_region_id M-1(0)  
+iv. task: id 1-1(1), name M-1(1), campaign_id M-1(1), description M-1(0), number_of_participant M-1(0)  
+v. task_status: id 1-1(1), status M-1(1), remarks 1-M(1)  
+vi. donation: id 1-1(1), donor_name M-1(1), charity_id M-1(1), donation_amount M-1(1)  
+vii. volunteer: id 1-1(1), name M-1(1), task_id M-1(1), level M-1(1)  
+viii. target_region: id 1-1(1), population M-1(1), region_name 1-1(1)  
 
-ii. charity_organization: id 1-1(1), name 1-1(1), cause 1-1(1), address 1-1(0), donation_raised M-1(0)
-
-iii. campaign: id 1-1(1), charity_id M-1(1), name M-1(1), start_date M-1(1), end_date M-1(0)
-
-iv. task: id 1-1(1), name M-1(1), campaign_id M-1(1), description M-1(0)
-
-v. task_status: id 1-1(1), status M-1(1), number_of_participant M-1(0)
-
-vi. donation: id 1-1(1), donor_name M-1(1), charity_id M-1(1), donation_amount M-1(1)
-
-vii. volunteer: id 1-1(1), name M-1(1), task_id M-1(1), level M-1(1)
-
-viii. target_region: id 1-1(1), population M-1(1), campaign_id M-1(1), region_name 1-1(1)
 
