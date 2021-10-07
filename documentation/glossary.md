@@ -81,5 +81,5 @@ vi. Donation: id 1-1(1), donor_name M-1(1), charity_id M-1(1), donation_amount M
 
 vii. Volunteer: id 1-1(1), name M-1(1), task_id M-1(1), level M-1(1)
 
-viii. target_region: id 1-1(1), population M-1(1), campaign_id M-1(1)
+viii. target_region: id 1-1(1), population M-1(1), campaign_id M-1(1), region_name 1-1(1)
 
