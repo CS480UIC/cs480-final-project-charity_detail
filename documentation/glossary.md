@@ -65,7 +65,7 @@ tasks_have_task_status ( 1(1) to 1(1))
 
 campaign_stationedat_target_region (M(0) to M(1))
 
-organization_hasa_login_user (M(1) to 1(1))
+charity_organization_hasa_login_user (M(1) to 1(1))
 
 donor_hasa_login_user (M(0) to 1(1))
 
