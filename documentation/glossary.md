@@ -59,7 +59,7 @@ campaigns_contains_tasks (1(1) to M(0))
 
 volunteers_assignedto_tasks (M(0) to 1(0))
 
-donations_contributedto_charities ( M(0) to 1(1))
+donations_contributedto_charity_organization ( M(0) to 1(1))
 
 tasks_have_task_status ( 1(1) to 1(1))
 
