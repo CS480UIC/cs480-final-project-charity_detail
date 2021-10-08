@@ -20,7 +20,7 @@ iv. task
 v. task_status  
 vi.  donation  
 vii. volunteer  
-viii. region  
+viii. target_region  
 
 
 A fully transparent NGO website that allows for better management and accountability of funds. Allowing for a trustworthy system to check for goal progress and donations.
