@@ -89,4 +89,78 @@ vii. volunteer: id 1-1(1), name M-1(1), task_id M-1(1), level M-1(1)
 
 viii. target_region: id 1-1(1), population M-1(1), region_name 1-1(1)  
 
+# Dependent Entities
+charity_organization, target_region
 
+# Independent Entities
+campaign, task, volunteer, charity_organization, campaign, login_user, donation
+
+
+# Dependency Relationships
+
+campaign  dependsOn  charity_organization
+
+donation dependsOn charity_organization
+
+task  dependsOn   campaign
+
+volunteer  dependsOn  tasks
+
+task   dependsOn   task_status
+
+campaign    dependsOn   target_region
+
+login_user dependsOn charity_organization, donation, volunteer
+
+# Supertypes, Subtypes and Partitions
+
+No Supertypes, Subtypes and Partitions in design
+
+# cascade and restrict actions for dependency relationships
+
+campaign    dependsOn   charity_organization :  on delete cascade
+
+donation dependsOn charity_organization : on delete set null
+
+task  dependsOn  campaigns :  on delete cascade
+
+volunteer  dependsOn  task :  on delete cascade
+
+task   dependsOn   task_status :  on delete cascade
+
+campaign    dependsOn   target_region :  on delete set null
+
+login_user dependsOn charity_organization, donation, volunteer on delete cascade
+
+
+# cascade and restrict rules on foreign keys that implement dependency
+
+campaign foreign key charity_id references charity_organization (id)
+
+doantion foreign key charity_id references charity_organization (id)
+
+task foreign key campaign_id references campaign (id)
+
+volunteer foreign key task_id references task (id)
+
+campaign foreign key target_region_id references target_region (id)
+
+login_user foreign key user_id references charity_organization (id) , donation (id), volunteer (id)
+
+# Attribute types
+
+i. login_user : user_id Integer, user_name varchar(30),password varchar(30), user_type char(1)
+
+ii. charity_organization: id Integer, name varchar(20), cause varchar(40), address varchar(30), target_region_id Integer
+
+iii. campaign: id Integer, charity_id Integer, name varchar(20), start_date Date, end_date Date, target_region_id Integer
+
+iv. task: id Integer, name varchar(20), campaign_id Integer, description varchar(50), number_of_participant Integer  
+
+v. task_status: id Integer, status varchar(10), remark varchar(20)
+
+vi. donation: id Integer, donor_name varchar(20), charity_id varchar(20), donation_amount double 
+
+vii. volunteer: id Integer, name varchar(20), task_id Integer, level varchar(20)  
+
+viii. target_region: id Integer, population Integer, region_name varchar(20) 
