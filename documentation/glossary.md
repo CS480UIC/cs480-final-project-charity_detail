@@ -118,19 +118,19 @@ No Supertypes, Subtypes and Partitions in design
 
 # cascade and restrict actions for dependency relationships
 
-campaign    dependsOn   charity_organization :  on delete cascade
+campaign    dependsOn   charity_organization :  on delete cascade, on update cascade
 
-donation dependsOn charity_organization : on delete set null
+donation dependsOn charity_organization : on delete set null , on update cascade
 
-task  dependsOn  campaigns :  on delete cascade
+task  dependsOn  campaigns :  on delete cascade , on update cascade
 
-volunteer  dependsOn  task :  on delete cascade
+volunteer  dependsOn  task :  on delete cascade , on update cascade
 
-task   dependsOn   task_status :  on delete cascade
+task   dependsOn   task_status :  on delete cascade, on update cascade
 
-campaign    dependsOn   target_region :  on delete set null
+campaign    dependsOn   target_region :  on delete set null , on update cascade
 
-login_user dependsOn charity_organization, donation, volunteer on delete cascade
+login_user dependsOn charity_organization, donation, volunteer on delete cascade , on update cascade
 
 
 # cascade and restrict rules on foreign keys that implement dependency
