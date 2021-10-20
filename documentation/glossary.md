@@ -81,7 +81,7 @@ iii. campaign: id 1-1(1), charity_id M-1(1), name M-1(1), start_date M-1(1), end
 
 iv. task: id 1-1(1), name M-1(1), campaign_id M-1(1), description M-1(0), number_of_participant M-1(0)  
 
-v. task_status: id 1-1(1), status M-1(1), remark 1-M(0)  
+v. task_status: id 1-1(1), status M-1(1), remark 1-1(0)  
 
 vi. donation: id 1-1(1), donor_name M-1(1), charity_id M-1(1), donation_amount M-1(1)  
 
