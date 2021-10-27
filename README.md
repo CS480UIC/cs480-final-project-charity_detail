@@ -2,7 +2,7 @@
 1. [Database](#database-name)
 2. [Authors](#authors)
 3. [Database description](#database-description)
-4. [Screenshots] (#screenshots)
+4. [Screenshots](#screenshots)
  
 # Database Name
 charity
