@@ -2,6 +2,7 @@
 1. [Database](#database-name)
 2. [Authors](#authors)
 3. [Database description](#database-description)
+4. Screenshots (#screenshots)
  
 # Database Name
 charity
@@ -30,3 +31,5 @@ A collection of charities and donators are registered with the website.
 The project uses HTML+JS for the front end.  Java + Apache Tomcat for server. MySQL as the DataBase Management System and JDBC as the connector.
 
 There is no transparent NGO website that allows for better management and accountability of funds.
+
+# Screenshots
