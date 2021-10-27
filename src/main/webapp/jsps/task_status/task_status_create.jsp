@@ -21,18 +21,18 @@
   </head>
   
   <body>
-  <h1>Entity1 Create</h1>
+  <h1>task_status Create</h1>
 <form action="<c:url value='/Entity1ServletCreate'/>" method="post">
-	User    :<input type="text" name="username" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
+	id:<input type="text" name="id" value="${form.id }"/>
+	<span style="color: red; font-weight: 900">${errors.id }</span>
 	<br/>
-	Password：<input type="password" name="password" value="${form.password }"/>
-	<span style="color: red; font-weight: 900">${errors.password }</span>
+	status：<input type="text" name="status" value="${form.status }"/>
+	<span style="color: red; font-weight: 900">${errors.status }</span>
 	<br/>
-	Email	：<input type="text" name="email" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
+	remark：<input type="text" name="remark" value="${form.remark }"/>
+	<span style="color: red; font-weight: 900">${errors.remark }</span>
 	<br/>
-	<input type="submit" value="Create Entity1"/>
+	<input type="submit" value="Create task_status"/>
 </form>
   </body>
 </html>
