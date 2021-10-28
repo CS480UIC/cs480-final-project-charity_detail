@@ -18,7 +18,7 @@
 	-->
 <style type="text/css">
 	body {
-		background: #4682B4; 
+		background: #00bfff; 
 	}
 	a {
 		text-transform:none;
@@ -31,23 +31,27 @@
   </head>
   
   <body>
-<h1 style="text-align: center;">HI CLASS OF CS 480</h1>
+<h1 style="text-align: center;">charity</h1>
 <div style="font-size: 10pt;">
 	<c:choose>
 		<c:when test="${empty sessionScope.session_user }">
 			<a href="<c:url value='/jsps/user/login.jsp'/>" target="_parent">Login</a> |&nbsp; 
-			<a href="<c:url value='/jsps/user/regist.jsp'/>" target="_parent">Register</a> |&nbsp; 
-	
+			<a href="<c:url value='/jsps/user/regist.jsp'/>" target="_parent">Register</a> |&nbsp;
+		  <a href="<c:url value='/jsps/task/task_menu.jsp'/>" target="_parent">task</a> |&nbsp;
+			<a href="<c:url value='/jsps/task_status/task_status_menu.jsp'/>" target="_parent">task_status</a> |&nbsp; 
+			<a href="<c:url value='/jsps/campaign/campaign_menu.jsp'/>" target="_parent">campaign</a> |&nbsp;
+			<a href="<c:url value='/jsps/donation/donation_menu.jsp'/>" target="_parent">donation</a> |&nbsp; 
+			<a href="<c:url value='/jsps/charity_organization/charity_organization_menu.jsp'/>" target="_parent">charity_organization</a>
 		</c:when>
 		<c:otherwise>
 			Hello：${sessionScope.session_user.username };
 			<a href="<c:url value='/jsps/item.jsp'/>" target="body">Query Result</a> |&nbsp;&nbsp;
 			<a href="<c:url value='/UserServletLogout'/>" target="_parent">Logout</a> |&nbsp; 
-			<a href="<c:url value='/jsps/entity1/entity1create.jsp'/>" target="_parent">Create Entity1</a> |&nbsp; 
-			<a href="<c:url value='/jsps/entity1/entity1read.jsp'/>" target="_parent">Read Entity1</a> |&nbsp;
-			<a href="<c:url value='/jsps/entity1/entity1update.jsp'/>" target="_parent">Update Entity1</a> |&nbsp;	 
-			<a href="<c:url value='/jsps/entity1/entity1delete.jsp'/>" target="_parent">Delete Entity1</a>	
-
+			<a href="<c:url value='/jsps/task/task_menu.jsp'/>" target="_parent">task</a> |&nbsp;
+			<a href="<c:url value='/jsps/task_status/task_status_menu.jsp'/>" target="_parent">task_status</a> |&nbsp; 
+			<a href="<c:url value='/jsps/campaign/campaign_menu.jsp'/>" target="_parent">campaign</a> |&nbsp;
+			<a href="<c:url value='/jsps/donation/donation_menu.jsp'/>" target="_parent">donation</a> |&nbsp; 
+			<a href="<c:url value='/jsps/charity_organization/charity_organization_menu.jsp'/>" target="_parent">charity_organization</a>	
 		</c:otherwise>
 	</c:choose>
 

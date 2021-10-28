@@ -5,9 +5,8 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
-    <base href="">
     
-    <title>Body</title>
+    <title>Delete Entity</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -22,18 +21,20 @@
   </head>
   
   <body>
-    <h1>Entities in project</h1>
-		<a href="<c:url value='/jsps/task/task_menu.jsp'/>" target="_parent">task</a>
-		<br>
-		<a href="<c:url value='/jsps/task_status/task_status_menu.jsp'/>" target="_parent">task_status</a>
-		<br> 
-		<a href="<c:url value='/jsps/campaign/campaign_menu.jsp'/>" target="_parent">campaign</a>
-		<br>
-		<a href="<c:url value='/jsps/donation/donation_menu.jsp'/>" target="_parent">donation</a>
-		<br> 
-		<a href="<c:url value='/jsps/charity_organization/charity_organization_menu.jsp'/>" target="_parent">charity_organization</a>
-		<br>
+  <h1>Delete Entity</h1>
+<p style="color: red; font-weight: 900">${msg }</p>
+<form action="<c:url value='/Entity1ServletDelete'/>" method="post">
+	<input type="hidden" name="method" value="delete"/>
+		<input type="hidden" name="username" value="${entity1.username }"/>
+	User    :<input type="text" name="username" value="${entity1.username }" disabled/>
+	<br/>
+	
+	Password：<input type="text" name="password" value="${entity1.password }" disabled/>
+	<br/>
+	Email	：<input type="text" name="email" value="${entity1.email }" disabled/>
+	<br/>
+	<input type="submit" value="Delete Entity1"/>
+</form>
 
-    
-  </body>
+</body>
 </html>
