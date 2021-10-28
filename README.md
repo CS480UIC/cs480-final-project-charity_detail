@@ -64,6 +64,18 @@ There is no transparent NGO website that allows for better management and accoun
 
 ![image](https://user-images.githubusercontent.com/56783167/139194968-c15e10cd-9f03-4115-a12d-70687ced9bc8.png)
 
+![image](https://user-images.githubusercontent.com/56783167/139195042-98f6502e-68a7-47a5-8251-3441e4664e8e.png)
+
+![image](https://user-images.githubusercontent.com/56783167/139195071-e5e17dac-9db6-4528-a91d-349b0233d408.png)
+
+![image](https://user-images.githubusercontent.com/56783167/139195096-4fafc110-2ee5-4980-8849-6717cba85ce7.png)
+
+![image](https://user-images.githubusercontent.com/56783167/139195134-4963869c-2276-4e28-8c30-2d6fa0f51fbd.png)
+
+![image](https://user-images.githubusercontent.com/56783167/139195167-aff9b01e-d363-4f4a-8114-c8f84c5325aa.png)
+
+![image](https://user-images.githubusercontent.com/56783167/139195199-f2ae773f-c677-4da9-81f7-512c86649ef9.png)
+
 
 
 
