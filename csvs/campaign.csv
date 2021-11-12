@@ -1,0 +1,6 @@
+id,charity_id,name,start_date,target_region_id,end_date
+1,6,Hunger & Food Insecurity Laos,2021-09-23,3,2021-12-30
+2,6,Hunger & Food Insecurity Indiana,2022-01-01,4,2022-03-01
+3,7,Clean Earth Mumbai,2022-04-11,2,NULL
+4,8,Hunger & Food Insecurity Chicago November,2021-11-01,1,2021-11-30
+5,7,Clean Earth LA,2021-10-28,5,NULL
