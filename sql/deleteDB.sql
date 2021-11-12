@@ -1,0 +1,10 @@
+use charity;
+DROP TABLE volunteer;
+DROP TABLE campaign;
+DROP TABLE user;
+DROP TABLE charity_organization;
+DROP TABLE donation;
+DROP TABLE task;
+DROP TABLE task_status;
+DROP TABLE target_region;
+DROP TABLE campaign_target_region;
