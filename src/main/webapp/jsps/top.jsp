@@ -41,7 +41,8 @@
 			<a href="<c:url value='/jsps/task_status/task_status_menu.jsp'/>" target="_parent">task_status</a> |&nbsp; 
 			<a href="<c:url value='/jsps/campaign/campaign_menu.jsp'/>" target="_parent">campaign</a> |&nbsp;
 			<a href="<c:url value='/jsps/donation/donation_menu.jsp'/>" target="_parent">donation</a> |&nbsp; 
-			<a href="<c:url value='/jsps/charity_organization/charity_organization_menu.jsp'/>" target="_parent">charity_organization</a>
+			<a href="<c:url value='/jsps/charity_organization/charity_organization_menu.jsp'/>" target="_parent">charity_organization</a> |&nbsp; 
+			<a href="<c:url value='/jsps/initialize/init.jsp'/>" target="_parent">Initialize Database</a>
 		</c:when>
 		<c:otherwise>
 			Hello：${sessionScope.session_user.username };
@@ -51,7 +52,9 @@
 			<a href="<c:url value='/jsps/task_status/task_status_menu.jsp'/>" target="_parent">task_status</a> |&nbsp; 
 			<a href="<c:url value='/jsps/campaign/campaign_menu.jsp'/>" target="_parent">campaign</a> |&nbsp;
 			<a href="<c:url value='/jsps/donation/donation_menu.jsp'/>" target="_parent">donation</a> |&nbsp; 
-			<a href="<c:url value='/jsps/charity_organization/charity_organization_menu.jsp'/>" target="_parent">charity_organization</a>	
+			<a href="<c:url value='/jsps/charity_organization/charity_organization_menu.jsp'/>" target="_parent">charity_organization</a>
+			<a href="<c:url value='/jsps/initialize/init.jsp'/>" target="_parent">Initialize Database</a>
+			
 		</c:otherwise>
 	</c:choose>
 
