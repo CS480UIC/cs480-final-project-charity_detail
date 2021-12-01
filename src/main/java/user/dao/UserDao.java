@@ -60,7 +60,7 @@ public class UserDao {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/charity","root", "Root@123");
 			
-			String sql = "insert into user values(?,?,?)";
+			String sql = "insert into user values(NULL,?,?,?,'D')";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
 		    preparestatement.setString(1,user.getUsername());
 		    preparestatement.setString(2,user.getPassword());
