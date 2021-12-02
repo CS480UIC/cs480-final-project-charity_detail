@@ -71,6 +71,28 @@
     <url-pattern>/InitializeDB</url-pattern>
   </servlet-mapping>
   
+   <servlet>
+    <description></description>
+    <display-name>TaskServletCreate</display-name>
+    <servlet-name>TaskServletCreate</servlet-name>
+    <servlet-class>task.web.servlet.TaskServletCreate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TaskServletCreate</servlet-name>
+    <url-pattern>/TaskServletCreate</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>TaskServletDelete</display-name>
+    <servlet-name>TaskServletDelete</servlet-name>
+    <servlet-class>task.web.servlet.TaskServletDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TaskServletDelete</servlet-name>
+    <url-pattern>/TaskServletDelete</url-pattern>
+  </servlet-mapping>
+  
   <servlet>
     <description></description>
     <display-name>UserServletLogin</display-name>

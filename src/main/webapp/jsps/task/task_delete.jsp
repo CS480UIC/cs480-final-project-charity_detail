@@ -22,7 +22,7 @@
   
   <body>
   <h1>Delete task</h1>
-<form action="<c:url value='/Entity1ServletDelete'/>" method="post">
+<form action="<c:url value='/TaskServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
 	Delete id:<input type="text" name="id" value="${form.id }"/>
 	<span style="color: red; font-weight: 900">${errors.id }</span>

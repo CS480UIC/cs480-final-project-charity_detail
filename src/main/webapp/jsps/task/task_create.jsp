@@ -22,10 +22,7 @@
   
   <body>
   <h1>task Create</h1>
-<form action="<c:url value='/Entity1ServletCreate'/>" method="post">
-	id:<input type="text" name="id" value="${form.id }"/>
-	<span style="color: red; font-weight: 900">${errors.id }</span>
-	<br/>
+<form action="<c:url value='/TaskServletCreate'/>" method="post">
 	name：<input type="text" name="name" value="${form.name }"/>
 	<span style="color: red; font-weight: 900">${errors.name }</span>
 	<br/>
