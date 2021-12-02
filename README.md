@@ -10,7 +10,6 @@ charity
 # Authors
 Shaun Kollannur (shauniop)  
 Judhajit Roy (Judhajit-Roy)  
-Charles Edge (CharlesE96)  
 
 # Database Description
 Entities in the database  
