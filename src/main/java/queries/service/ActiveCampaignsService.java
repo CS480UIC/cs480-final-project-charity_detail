@@ -9,7 +9,7 @@ import queries.domain.ActiveCampaigns;
  * logic functions such as register, login
  * @author Aayush Makharia
  */
-public class ActiveCampaignsService {
+public class ActiveCampaignsService{
 	private ActiveCampaignsDao activecampaignsDao = new ActiveCampaignsDao();
 	
 	

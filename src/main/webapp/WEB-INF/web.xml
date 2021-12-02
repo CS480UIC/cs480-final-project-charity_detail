@@ -129,6 +129,66 @@
   </servlet-mapping>
   <servlet>
     <description></description>
+    <display-name>DonationSummary</display-name>
+    <servlet-name>DonationSummary</servlet-name>
+    
+    <servlet-class>queries.web.servlet.DonationSummary</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DonationSummary</servlet-name>
+    <url-pattern>/DonationSummary</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>HungerCampaigns</display-name>
+    <servlet-name>HungerCampaigns</servlet-name>
+    
+    <servlet-class>queries.web.servlet.HungerCampaigns</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HungerCampaigns</servlet-name>
+    <url-pattern>/HungerCampaigns</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>FinishedCampaigns</display-name>
+    <servlet-name>FinishedCampaigns</servlet-name>
+    
+    <servlet-class>queries.web.servlet.FinishedCampaigns</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FinishedCampaigns</servlet-name>
+    <url-pattern>/FinishedCampaigns</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>OngroundCharity</display-name>
+    <servlet-name>OngroundCharity</servlet-name>
+    
+    <servlet-class>queries.web.servlet.OngroundCharity</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>OngroundCharity</servlet-name>
+    <url-pattern>/OngroundCharity</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>TaskVolunteers</display-name>
+    <servlet-name>TaskVolunteers</servlet-name>
+    
+    <servlet-class>queries.web.servlet.TaskVolunteers</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TaskVolunteers</servlet-name>
+    <url-pattern>/TaskVolunteers</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+    <description></description>
     <display-name>findAll</display-name>
     <servlet-name>findAll</servlet-name>
     

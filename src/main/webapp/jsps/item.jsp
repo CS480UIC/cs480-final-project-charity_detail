@@ -26,6 +26,11 @@
     <br>
     <a href="<c:url value='/findAll'/>" target="body">Please list all the user in the table</a>&nbsp;&nbsp;
  	<a href="<c:url value='/ActiveCampaigns'/>" target="body">List of all the active campaigns</a>&nbsp;&nbsp;
-    
+    <a href="<c:url value='/DonationSummary'/>" target="body">List of all the donation summary</a>&nbsp;&nbsp;
+    <a href="<c:url value='/HungerCampaigns'/>" target="body">List of all the hunger campaigns</a>&nbsp;&nbsp;
+    <a href="<c:url value='/TaskVolunteers'/>" target="body">List of all the task volunteers</a>&nbsp;&nbsp;
+    <a href="<c:url value='/FinishedCampaigns'/>" target="body">List of all the finished campaigns</a>&nbsp;&nbsp;
+    <a href="<c:url value='/OngroundCharity'/>" target="body">List of all the on ground charity</a>&nbsp;&nbsp;
+
   </body>
 </html>
