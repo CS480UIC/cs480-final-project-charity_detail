@@ -22,10 +22,16 @@
   
   <body>
   <h1>Update</h1>
-<form action="<c:url value='/Entity1ServletUpdate'/>" method="post">
+<form action="<c:url value='/TaskServletUpdate'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
-	Update id:<input type="text" name="id" value="${form.id }"/>
+	id:<input type="text" name="id" value="${form.id }"/>
 	<span style="color: red; font-weight: 900">${errors.id }</span>
+	<br/>
+	description:<input type="text" name="description" value="${form.description }"/>
+	<span style="color: red; font-weight: 900">${errors.description }</span>
+	<br/>
+	No of participants:<input type="text" name="number_of_participants" value="${form.number_of_participants }"/>
+	<span style="color: red; font-weight: 900">${errors.number_of_participants }</span>
 	<br/>
 	<input type="submit" value="Update task"/>
 </form>

@@ -22,7 +22,7 @@
   
   <body>
   <h1>task_status Create</h1>
-<form action="<c:url value='/Entity1ServletCreate'/>" method="post">
+<form action="<c:url value='/TaskStatusServletCreate'/>" method="post">
 	id:<input type="text" name="id" value="${form.id }"/>
 	<span style="color: red; font-weight: 900">${errors.id }</span>
 	<br/>

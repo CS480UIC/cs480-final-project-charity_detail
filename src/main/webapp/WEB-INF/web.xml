@@ -92,6 +92,76 @@
     <servlet-name>TaskServletDelete</servlet-name>
     <url-pattern>/TaskServletDelete</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>TaskServletUpdate</display-name>
+    <servlet-name>TaskServletUpdate</servlet-name>
+    <servlet-class>task.web.servlet.TaskServletUpdate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TaskServletUpdate</servlet-name>
+    <url-pattern>/TaskServletUpdate</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>TaskStatusServletCreate</display-name>
+    <servlet-name>TaskStatusServletCreate</servlet-name>
+    
+    <servlet-class>task_status.web.servlet.TaskStatusServletCreate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TaskStatusServletCreate</servlet-name>
+    <url-pattern>/TaskStatusServletCreate</url-pattern>
+  </servlet-mapping>
+ 
+   <servlet>
+    <description></description>
+    <display-name>TaskStatusServletDelete</display-name>
+    <servlet-name>TaskStatusServletDelete</servlet-name>
+    
+    <servlet-class>task_status.web.servlet.TaskStatusServletDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TaskStatusServletDelete</servlet-name>
+    <url-pattern>/TaskStatusServletDelete</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>CampaignServletCreate</display-name>
+    <servlet-name>CampaignServletCreate</servlet-name>
+    
+    <servlet-class>campaign.web.servlet.CampaignServletCreate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CampaignServletCreate</servlet-name>
+    <url-pattern>/CampaignServletCreate</url-pattern>
+  </servlet-mapping>
+ 
+   <servlet>
+    <description></description>
+    <display-name>CampaignServletDelete</display-name>
+    <servlet-name>CampaignServletDelete</servlet-name>
+    
+    <servlet-class>campaign.web.servlet.CampaignServletDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CampaignServletDelete</servlet-name>
+    <url-pattern>/CampaignServletDelete</url-pattern>
+  </servlet-mapping>
+ 
+  <servlet>
+    <description></description>
+    <display-name>CampaignServletUpdate</display-name>
+    <servlet-name>CampaignServletUpdate</servlet-name>
+    
+    <servlet-class>campaign.web.servlet.CampaignServletUpdate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CampaignServletUpdate</servlet-name>
+    <url-pattern>/CampaignServletUpdate</url-pattern>
+  </servlet-mapping>
   
   <servlet>
     <description></description>

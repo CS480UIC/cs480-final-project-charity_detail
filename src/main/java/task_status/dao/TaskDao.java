@@ -1,4 +1,4 @@
-package task.dao;
+package task_status.dao;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -12,7 +12,7 @@ import java.sql.SQLException;
 //import java.util.ArrayList;
 //import java.util.List;
 
-import task.domain.Task;
+import task_status.domain.Task;
 
 /**
  * DDL functions performed in database
@@ -33,12 +33,11 @@ public class TaskDao {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/charity","root", "Root@123");
 			
-			String sql = "insert into task values(NULL,?,?,?,?)";
-			PreparedStatement preparestatement = connect.prepareStatement(sql); 
-		    preparestatement.setString(1,form.getName());
-		    preparestatement.setInt(2,form.getCampaign_id());
-		    preparestatement.setString(3,form.getDescription());
-		    preparestatement.setInt(4,form.getNumPart());
+			String sql = "insert into task_status values(?,?,?)";
+			PreparedStatement preparestatement = connect.prepareStatement(sql);
+			preparestatement.setLong(1,form.getID());
+		    preparestatement.setString(2,form.getStatus());
+		    preparestatement.setString(3,form.getRemark());
 		    preparestatement.executeUpdate();
 		    connect.close();
 		} catch(SQLException e) {
@@ -47,34 +46,35 @@ public class TaskDao {
 	}
 	
 	
-	public void update(Task form) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
-		System.out.println("Now going to update");
-		System.out.println(form);
-	
-		try {
-			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/charity","root", "Root@123");
-			
-			String sql = "UPDATE task SET description = ?, number_of_participants = ? where id = ?;";
-			System.out.println("Update Executed");
-			PreparedStatement preparestatement = connect.prepareStatement(sql); 
-		    preparestatement.setString(1,form.getDescription());
-			preparestatement.setLong(2,form.getNumPart());
-		    preparestatement.setLong(3,form.getID());
-		    preparestatement.executeUpdate();
-		    connect.close();
-		} catch(SQLException e) {
-			throw new RuntimeException(e);
-		}
-	}
-	
+//	public void update(Entity1 form) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+//		System.out.println("Now going to update");
+//		System.out.println(form);
+//
+//		try {
+//			Class.forName("com.mysql.cj.jdbc.Driver");
+//			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/charity","root", "Root@123");
+//			
+//			String sql = "UPDATE entity1 SET password = ?, email = ? where username = ?;";
+//			System.out.println("Update Executed");
+//			PreparedStatement preparestatement = connect.prepareStatement(sql); 
+//		    preparestatement.setString(1,form.getPassword());
+//			preparestatement.setString(2,form.getEmail());
+//		    preparestatement.setString(3,form.getUsername());
+//		    preparestatement.executeUpdate();
+//		    connect.close();
+//		} catch(SQLException e) {
+//			throw new RuntimeException(e);
+//		}
+//	}
+//	
+//	
 	public void delete(String id) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		System.out.println("Now going to delete");
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/charity","root", "Root@123");
 			
-			String sql = "delete from task where id = ?";
+			String sql = "delete from task_status where id = ?";
 			System.out.println(id);
 			System.out.println("Delete Executed");
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
@@ -111,4 +111,27 @@ public class TaskDao {
 			throw new RuntimeException(e);
 		}
 	}
+
+
+	public void update(Task form) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+		System.out.println("Now going to update");
+		System.out.println(form);
+	
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/charity","root", "Root@123");
+			
+			String sql = "UPDATE task_status SET remark = ?, status = ? where id = ?;";
+			System.out.println("Update Executed");
+			PreparedStatement preparestatement = connect.prepareStatement(sql); 
+		    preparestatement.setString(1,form.getRemark());
+			preparestatement.setString(2,form.getStatus());
+		    preparestatement.setLong(3,form.getID());
+		    preparestatement.executeUpdate();
+		    connect.close();
+		} catch(SQLException e) {
+			throw new RuntimeException(e);
+		}
+	}
+
 }

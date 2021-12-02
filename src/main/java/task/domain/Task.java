@@ -10,12 +10,19 @@ public class Task {
 	/*
 	 * Correspond to the user table
 	 */
-	
+	private int id;
 	private String name;
 	private int campaign_id; 
 	private String description;
 	private int number_of_participant;
 	
+	public int getID() {
+		return id;
+	}
+
+	public void setID(int id) {
+		this.id=id;
+	}
 	
 	public String getName() {
 		return name;

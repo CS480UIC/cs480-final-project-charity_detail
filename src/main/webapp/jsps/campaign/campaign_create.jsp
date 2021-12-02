@@ -22,10 +22,7 @@
   
   <body>
   <h1>campaign Create</h1>
-<form action="<c:url value='/Entity1ServletCreate'/>" method="post">
-	id:<input type="text" name="id" value="${form.id }"/>
-	<span style="color: red; font-weight: 900">${errors.id }</span>
-	<br/>
+<form action="<c:url value='/CampaignServletCreate'/>" method="post">
 	charity_id：<input type="text" name="charity_id" value="${form.charity_id }"/>
 	<span style="color: red; font-weight: 900">${errors.charity_id }</span>
 	<br/>

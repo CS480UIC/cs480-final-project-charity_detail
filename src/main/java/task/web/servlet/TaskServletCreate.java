@@ -72,8 +72,8 @@ public class TaskServletCreate extends HttpServlet {
 		try {
 			System.out.println("3");
 			taskservice.create(form);
-			response.sendRedirect( request.getContextPath() + "/jsps/main.jsp");
-			
+			request.setAttribute("msg", "Task Created");
+			request.getRequestDispatcher("/jsps/main.jsp").forward(request, response);			
 		} catch (ClassNotFoundException | TaskException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

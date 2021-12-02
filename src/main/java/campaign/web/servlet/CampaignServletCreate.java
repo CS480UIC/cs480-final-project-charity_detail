@@ -1,4 +1,4 @@
-package task.web.servlet;
+package campaign.web.servlet;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -11,69 +11,82 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import task.dao.TaskDao;
-import task.domain.Task;
-//import entity1.service.Entity1Service;
-import task.dao.TaskDao;
-import task.domain.Task;
+import campaign.domain.Campaign;
+import campaign.service.CampaignException;
+import campaign.service.CampaignService;
+
 
 /**
  * Servlet implementation class UserServlet
  */
 
-public class TaskServletUpdate extends HttpServlet {
+public class CampaignServletCreate extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public TaskServletUpdate() {
+    public CampaignServletCreate() {
         super();
         // TODO Auto-generated constructor stub
     }
-    
+
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		doPost(request,response);
 	}
-	
+
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-		TaskDao taskdao = new TaskDao();
-		
+		CampaignService campaignservice = new CampaignService();
 		Map<String,String[]> paramMap = request.getParameterMap();
-		Task form = new Task();
+		Campaign form = new Campaign();
 		List<String> info = new ArrayList<String>();
-
+		System.out.println(form);
 		for(String name : paramMap.keySet()) {
 			
 			String[] values = paramMap.get(name);
 			info.add(values[0]);
 			System.out.println(name + ": " + Arrays.toString(values));
-		}
-		form.setID(Integer.parseInt(info.get(1)));
-		form.setDescription(info.get(2));
-		form.setNumPart(Integer.parseInt(info.get(3)));
+//			System.out.println(info.add(values[0]));
 
+		}
+		System.out.println(info);
+//		System.out.println(info);
+
+//		System.out.println("1");
+
+		form.setCharity_id(Integer.parseInt(info.get(0)));
+//		System.out.println("2");
+
+		form.setName(info.get(1));
+		
+		form.setStart_date(info.get(2));
+		
+		form.setTarget_region_id(Integer.parseInt(info.get(3)));
+		
+		form.setEnd_date(info.get(4));
+		
 		try {
-			taskdao.update(form);
-
-		} catch (ClassNotFoundException e1) {
-			e1.printStackTrace();
-		} catch (InstantiationException e1) {
-			e1.printStackTrace();
-		} catch (IllegalAccessException e1) {
-			e1.printStackTrace();
-		}
-		request.setAttribute("msg", "Task Updated");
-		request.getRequestDispatcher("/jsps/main.jsp").forward(request, response);
+			System.out.println("3");
+			campaignservice.create(form);
+			response.sendRedirect( request.getContextPath() + "/jsps/main.jsp");
+			
+		} catch (ClassNotFoundException | CampaignException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (InstantiationException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IllegalAccessException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} 
+		
 	}
+
 }
-
-
-
