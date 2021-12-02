@@ -116,7 +116,17 @@
     <url-pattern>/UserServletLogout</url-pattern>
   </servlet-mapping>
   
-  
+  <servlet>
+    <description></description>
+    <display-name>ActiveCampaigns</display-name>
+    <servlet-name>ActiveCampaigns</servlet-name>
+    
+    <servlet-class>queries.web.servlet.ActiveCampaigns</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ActiveCampaigns</servlet-name>
+    <url-pattern>/ActiveCampaigns</url-pattern>
+  </servlet-mapping>
   <servlet>
     <description></description>
     <display-name>findAll</display-name>

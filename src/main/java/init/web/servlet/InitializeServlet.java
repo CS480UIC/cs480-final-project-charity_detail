@@ -46,7 +46,7 @@ public class InitializeServlet extends HttpServlet {
 		System.out.println("call the servlet");
 		InitService initservice =  new InitService();
 		//Read the file from webapp/sql
-		InputStream input = getServletContext().getResourceAsStream("/sql/initializeDB.sql");
+		InputStream input = getServletContext().getResourceAsStream("/sql/completeDB.sql");
 
 		try {
 			initservice.initializeDB(input);
