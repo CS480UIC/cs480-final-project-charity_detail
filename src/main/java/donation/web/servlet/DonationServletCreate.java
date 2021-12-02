@@ -1,7 +1,6 @@
-package init.web.servlet;
+package donation.web.servlet;
 
 import java.io.IOException;
-import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -12,21 +11,22 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import user.domain.User;
-import init.service.InitException;
-import init.service.InitService;
+import donation.domain.Donation;
+import donation.service.DonationException;
+import donation.service.DonationService;
+
 
 /**
  * Servlet implementation class UserServlet
  */
 
-public class InitializeServlet extends HttpServlet {
+public class DonationServletCreate extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public InitializeServlet() {
+    public DonationServletCreate() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -42,17 +42,38 @@ public class InitializeServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		//Map<String, String> form = new HashMap<String,String>();
-		System.out.println("call the servlet");
-		InitService initservice =  new InitService();
-		//Read the file from webapp/sql
-		InputStream input = getServletContext().getResourceAsStream("/sql/initializeDB.sql");
-
-		try {
-			initservice.initializeDB(input);
+		DonationService donationservice = new DonationService();
+		Map<String,String[]> paramMap = request.getParameterMap();
+		Donation form = new Donation();
+		List<String> info = new ArrayList<String>();
+		System.out.println(form);
+		for(String name : paramMap.keySet()) {
 			
+			String[] values = paramMap.get(name);
+			info.add(values[0]);
+			System.out.println(name + ": " + Arrays.toString(values));
+//			System.out.println(info.add(values[0]));
+
+		}
+//		System.out.println("1");
+		System.out.println(info);
+		form.setId(Integer.parseInt(info.get(0)));
+		form.setdonor_name(info.get(1));
+//		System.out.println("1");
+
+		form.setcharity_id(info.get(2));
+//		System.out.println("2");
+
+		form.setdonation_amount(info.get(3));		
+//		System.out.println("3");
+		
+		
+		try {
+			System.out.println("3");
+			donationservice.create(form);
 			response.sendRedirect( request.getContextPath() + "/jsps/main.jsp");
-		} catch (ClassNotFoundException | InitException e) {
+			
+		} catch (ClassNotFoundException | DonationException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (InstantiationException e) {
@@ -61,7 +82,7 @@ public class InitializeServlet extends HttpServlet {
 		} catch (IllegalAccessException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
+		} 
 		
 	}
 
