@@ -24,11 +24,14 @@
   <h1>Read Entity Output</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
-	User    :<input type="text" name="username" value="${entity1.username }" disabled/>
+	id:<input type="text" name="id"  value="${donation.id }" disabled/>
 	<br/>
-	Password：<input type="text" name="password" value="${entity1.password }" disabled/>
+	
+	Donor Name：<input type="text" name="donor_name" value="${donation.donor_name }" disabled/>
 	<br/>
-	Email	：<input type="text" name="email" value="${entity1.email }" disabled/>
+	Charity id：<input type="text" name="charity_id" value="${donation.charity_id }" disabled/>
+	<br/>
+	Donation Amount:<input type="text" name="donation_amount" value="${donation.donation_amount }" disabled/>
 	<br/>
 </form>
 

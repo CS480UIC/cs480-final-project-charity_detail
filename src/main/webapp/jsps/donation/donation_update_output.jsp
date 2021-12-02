@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Delete Entity</title>
+    <title>Delete Donation</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,26 +21,31 @@
   </head>
   
   <body>
-  <h1>Update Entity</h1>
+  <h1>Update Donation</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
-	User    :<input type="text" name="username1" value="${entity1.username }" disabled/>
+	id:<input type="text" name="id"  value="${donation.id }" disabled/>
 	<br/>
 	
-	Password：<input type="text" name="password1" value="${entity1.password }" disabled />
+	Donor Name：<input type="text" name="donor_name" value="${donation.donor_name }" disabled/>
 	<br/>
-	Email	：<input type="text" name="email1" value="${entity1.email }" disabled/>
+	Charity id：<input type="text" name="charity_id" value="${donation.charity_id }" disabled/>
+	<br/>
+	Donation Amount:<input type="text" name="donation_amount" value="${donation.donation_amount }" disabled/>
 	<br/>
 </form>
 <h1>Update the values below</h1>
-<form action="<c:url value='/Entity1ServletUpdate'/>" method="post">
+<form action="<c:url value='/DonationServletUpdate'/>" method="post">
 		<input type="hidden" name="method" value="update"/>
-				<input type="hidden" name="username" value="${entity1.username }"/>
-	Password：<input type="password" name="password" value="${form.password }"/>
-	<span style="color: red; font-weight: 900">${errors.password }</span>
+				<input type="hidden" name="id" value="${donation.id }"/>
+	Donor Name：<input type="text" name="donor_name" value="${form.donor_name }"/>
+	<span style="color: red; font-weight: 900">${errors.donor_name }</span>
 	<br/>
-	Email	：<input type="text" name="email" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
+	Charity id：<input type="text" name="charity_id" value="${form.charity_id }"/>
+	<span style="color: red; font-weight: 900">${errors.charity_id }</span>
+	<br/>
+	Donation Amount:<input type="text" name="donation_amount" value="${form.donation_amount }"/>
+	<span style="color: red; font-weight: 900">${errors.donation_amount }</span>
 	<br/>
 	<input type="submit" value="Update Entity1"/>
 </form>

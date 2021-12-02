@@ -18,23 +18,24 @@ import donation.domain.Donation;
  */
 public class DonationDao {
 
-	public static Donation findBydonorname(String donor_name) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+	public static Donation findByid(String id) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		Donation donation = new Donation();
 
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/charity","root", "Root@123");
-		    String sql = "select * from donation where donor_name=?";
+		    String sql = "select * from donation where id=?";
 		    PreparedStatement preparestatement = connect.prepareStatement(sql); 
-		    preparestatement.setString(1,donor_name);
+		    preparestatement.setString(1,id);
 		    ResultSet resultSet = preparestatement.executeQuery();
 		    //ResultSet resultSet  = preparestatement.executeUpdate();
 		    while(resultSet.next()){
-		    	String user_name = resultSet.getString("donor_name");
-		    	if(user_name.equals(donor_name)){
-		    		donation.setdonor_name(resultSet.getString("donor_name"));
-		    		donation.setcharity_id(resultSet.getString("charity_id"));
-		    		donation.setdonation_amount(resultSet.getString("donation_amount"));		
+		    	String user_name = resultSet.getString("id");
+		    	if(user_name.equals(id)){
+		    		donation.setId(Integer.parseInt(resultSet.getString("id")));
+		    		donation.setDonor_name(resultSet.getString("donor_name"));
+		    		donation.setCharity_id(Integer.parseInt(resultSet.getString("charity_id")));
+		    		donation.setDonation_amount(resultSet.getString("donation_amount"));		
 		    	}
 		    }
 		    connect.close();
@@ -61,9 +62,9 @@ public class DonationDao {
 			String sql = "insert into donation (id,donor_name,charity_id,donation_amount) values (?,?,?,?)";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
 			preparestatement.setInt(1,form.getId());
-		    preparestatement.setString(2,form.getdonor_name());
-		    preparestatement.setString(3,form.getcharity_id());
-		    preparestatement.setString(4,form.getdonation_amount());
+		    preparestatement.setString(2,form.getDonor_name());
+		    preparestatement.setInt(3,form.getCharity_id());
+		    preparestatement.setString(4,form.getDonation_amount());
 		    preparestatement.executeUpdate();
 		    connect.close();
 		} catch(SQLException e) {
@@ -80,12 +81,13 @@ public class DonationDao {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/charity","root", "Root@123");
 			
-			String sql = "UPDATE donation SET donor_name = ?, charity_id = ?,donation_amount = ? where donor_name = ?;";
+			String sql = "UPDATE donation SET donor_name = ?, charity_id = ?,donation_amount = ? where id = ?;";
 			System.out.println("Update Executed");
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
-			preparestatement.setString(1,form.getdonor_name());
-		    preparestatement.setString(2,form.getcharity_id());
-		    preparestatement.setString(3,form.getdonation_amount());
+			preparestatement.setString(1,form.getDonor_name());
+		    preparestatement.setInt(2,form.getCharity_id());
+		    preparestatement.setString(3,form.getDonation_amount());
+		    preparestatement.setInt(4,form.getId());
 		    preparestatement.executeUpdate();
 		    connect.close();
 		} catch(SQLException e) {
@@ -100,7 +102,7 @@ public class DonationDao {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/charity","root", "Root@123");
 			
-			String sql = "delete from donation where donor_name = ?";
+			String sql = "delete from donation where id = ?";
 			System.out.println(username);
 			System.out.println("Delete Executed");
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 

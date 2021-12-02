@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Entity1 Create</title>
+    <title>Donation Create</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -35,7 +35,7 @@
 	Donation Amount:<input type="text" name="donation_amount" value="${form.donation_amount }"/>
 	<span style="color: red; font-weight: 900">${errors.donation_amount }</span>
 	<br/>
-	<input type="submit" value="Create task_status"/>
+	<input type="submit" value="Make Donation"/>
 </form>
   </body>
 </html>

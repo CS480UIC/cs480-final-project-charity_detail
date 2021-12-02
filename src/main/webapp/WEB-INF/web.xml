@@ -95,6 +95,48 @@
   
   <servlet>
     <description></description>
+    <display-name>DonationServletCreate</display-name>
+    <servlet-name>DonationServletCreate</servlet-name>
+    <servlet-class>donation.web.servlet.DonationServletCreate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DonationServletCreate</servlet-name>
+    <url-pattern>/DonationServletCreate</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>DonationServletDelete</display-name>
+    <servlet-name>DonationServletDelete</servlet-name>
+    <servlet-class>donation.web.servlet.DonationServletDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DonationServletDelete</servlet-name>
+    <url-pattern>/DonationServletDelete</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+    <description></description>
+    <display-name>DonationServletRead</display-name>
+    <servlet-name>DonationServletRead</servlet-name>
+    <servlet-class>donation.web.servlet.DonationServletRead</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DonationServletRead</servlet-name>
+    <url-pattern>/DonationServletRead</url-pattern>
+  </servlet-mapping> 
+  <servlet>
+    <description></description>
+    <display-name>DonationServletUpdate</display-name>
+    <servlet-name>DonationServletUpdate</servlet-name>
+    <servlet-class>donation.web.servlet.DonationServletUpdate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DonationServletUpdate</servlet-name>
+    <url-pattern>/DonationServletUpdate</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
     <display-name>UserServletLogin</display-name>
     <servlet-name>UserServletLogin</servlet-name>
     <servlet-class>user.web.servlet.UserServletLogin</servlet-class>

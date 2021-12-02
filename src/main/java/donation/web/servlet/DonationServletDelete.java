@@ -51,7 +51,7 @@ public class DonationServletDelete extends HttpServlet {
 		{
 			try {
 //				entity1dao to Entity1Dao
-				donation = donationdao.findBydonorname(request.getParameter("donor_name"));
+				donation = donationdao.findByid(request.getParameter("id"));
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
 			} catch (InstantiationException e1) {
@@ -61,7 +61,7 @@ public class DonationServletDelete extends HttpServlet {
 			}
 		
 //			Entity1Service entity1service = new Entity1Service();		
-			if(donation.getdonor_name()!=null){
+			if(donation.getId()!=null){
 						System.out.println(donation);
 						request.setAttribute("donation", donation);
 						request.getRequestDispatcher("/jsps/donation/donation_delete_output.jsp").forward(request, response);

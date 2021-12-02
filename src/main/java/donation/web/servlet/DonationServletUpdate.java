@@ -49,7 +49,7 @@ public class DonationServletUpdate extends HttpServlet {
 		if(method.equals("search"))
 		{
 			try {
-				donation = DonationDao.findBydonorname(request.getParameter("donor_name"));
+				donation = DonationDao.findByid(request.getParameter("id"));
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
 			} catch (InstantiationException e1) {
@@ -59,8 +59,8 @@ public class DonationServletUpdate extends HttpServlet {
 			}
 		
 //			Entity1Service entity1service = new Entity1Service();		
-			if(donation.getdonor_name()!=null){
-				System.out.println("11");
+			if(donation.getId()!=null){
+//				System.out.println("11");
 
 						System.out.println(donation);
 						request.setAttribute("donation", donation);
@@ -85,9 +85,11 @@ public class DonationServletUpdate extends HttpServlet {
 				info.add(values[0]);
 				System.out.println(name + ": " + Arrays.toString(values));
 			}
-			form.setdonor_name(info.get(2));
-			form.setcharity_id(info.get(3));
-			form.setdonation_amount(request.getParameter("donor_name"));
+			System.out.println(info.get(2));
+			form.setDonor_name(info.get(2));
+			form.setCharity_id(Integer.parseInt(info.get(2)));
+			form.setDonation_amount(info.get(3));
+			form.setId(Integer.parseInt(request.getParameter("id")));
 
 			try {
 				donationdao.update(form);

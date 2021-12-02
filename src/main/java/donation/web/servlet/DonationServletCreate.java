@@ -58,13 +58,13 @@ public class DonationServletCreate extends HttpServlet {
 //		System.out.println("1");
 		System.out.println(info);
 		form.setId(Integer.parseInt(info.get(0)));
-		form.setdonor_name(info.get(1));
+		form.setDonor_name(info.get(1));
 //		System.out.println("1");
 
-		form.setcharity_id(info.get(2));
+		form.setCharity_id(Integer.parseInt(info.get(2)));
 //		System.out.println("2");
 
-		form.setdonation_amount(info.get(3));		
+		form.setDonation_amount(info.get(3));		
 //		System.out.println("3");
 		
 		

@@ -41,7 +41,7 @@ public class DonationServletRead extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		Donation donation = null;
 		try {
-			donation = DonationDao.findBydonorname(request.getParameter("donor_name"));
+			donation = DonationDao.findByid(request.getParameter("id"));
 		} catch (ClassNotFoundException e1) {
 			e1.printStackTrace();
 		} catch (InstantiationException e1) {
@@ -50,15 +50,15 @@ public class DonationServletRead extends HttpServlet {
 			e1.printStackTrace();
 		}
 		
-		if(donation.getdonor_name()!=null){
+		if(donation.getId()!=null){
 					System.out.println(donation);
 					request.setAttribute("donation", donation);
-					request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
+					request.getRequestDispatcher("/jsps/donation/donation_read_output.jsp").forward(request, response);
 				
 			}
 			else{
 			request.setAttribute("msg", "Entity not found");
-			request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
+			request.getRequestDispatcher("/jsps/donation/donation_read_output.jsp").forward(request, response);
 		}
 	}
 }
