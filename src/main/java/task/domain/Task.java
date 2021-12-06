@@ -14,13 +14,15 @@ public class Task {
 	private String name;
 	private int campaign_id; 
 	private String description;
-	private int number_of_participant;
+
+	private int number_of_participants;
 	
-	public int getID() {
+	
+	public int getId() {
 		return id;
 	}
 
-	public void setID(int id) {
+	public void setId(int id) {
 		this.id=id;
 	}
 	
@@ -44,18 +46,18 @@ public class Task {
 		this.description = description;
 	}
 	
-	public int getNumPart() {
-		return number_of_participant;
+	public int getNumber_of_participants() {
+		return number_of_participants;
 	}
 	
-	public void setNumPart(int number_of_participant) {
-		this.number_of_participant = number_of_participant;
+	public void setNumber_of_participants(int number_of_participants) {
+		this.number_of_participants = number_of_participants;
 	}
 
 	@Override
 	public String toString() {
 		return "Task [ name=" + name + ", campaign_id="
-				+ campaign_id + ", description=" + description + ", number_of_participant=" + number_of_participant + "]";
+				+ campaign_id + ", description=" + description + ", number_of_participant=" + number_of_participants + "]";
 	}
 
 	public void setCampaign_id(int campaign_id) {

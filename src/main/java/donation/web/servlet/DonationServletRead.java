@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import donation.dao.DonationDao;
-import donation.domain.Donation;
+import donation.domain.Task;
 //import entity1.service.Entity1Service;
 
 
@@ -39,7 +39,7 @@ public class DonationServletRead extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		Donation donation = null;
+		Task donation = null;
 		try {
 			donation = DonationDao.findByid(request.getParameter("id"));
 		} catch (ClassNotFoundException e1) {

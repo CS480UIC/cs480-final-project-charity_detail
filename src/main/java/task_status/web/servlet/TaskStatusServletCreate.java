@@ -58,7 +58,7 @@ public class TaskStatusServletCreate extends HttpServlet {
 		System.out.println(info);
 //		System.out.println(info);
 
-		form.setID(Integer.parseInt(info.get(0)));
+		form.setId(Integer.parseInt(info.get(0)));
 //		System.out.println("1");
 
 		form.setStatus(info.get(1));

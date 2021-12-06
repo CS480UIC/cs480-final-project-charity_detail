@@ -66,7 +66,7 @@ public class TaskServletCreate extends HttpServlet {
 
 		form.setDescription(info.get(2));
 		
-		form.setNumPart(Integer.parseInt(info.get(3)));
+		form.setNumber_of_participants(Integer.parseInt(info.get(3)));
 		
 		
 		try {

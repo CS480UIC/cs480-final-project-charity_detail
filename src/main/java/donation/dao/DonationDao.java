@@ -12,14 +12,14 @@ import java.sql.SQLException;
 //import java.util.ArrayList;
 //import java.util.List;
 
-import donation.domain.Donation;
+import donation.domain.Task;
 /**
  * DDL functions performed in database
  */
 public class DonationDao {
 
-	public static Donation findByid(String id) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
-		Donation donation = new Donation();
+	public static Task findByid(String id) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+		Task donation = new Task();
 
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
@@ -53,7 +53,7 @@ public class DonationDao {
 	 * @throws InstantiationException 
 	 */
 	
-	public void add(Donation form) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+	public void add(Task form) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		System.out.println("We are here donation");
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
@@ -73,7 +73,7 @@ public class DonationDao {
 	}
 	
 	
-	public void update(Donation form) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+	public void update(Task form) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		System.out.println("Now going to update donation");
 		System.out.println(form);
 

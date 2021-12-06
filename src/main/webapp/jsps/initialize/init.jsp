@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Register</title>
+    <title>Initialize DB</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,7 +21,7 @@
   </head>
   
   <body>
-  <h1>Register</h1>
+  <h1>Initialize DB</h1>
 
 <p style="color: red; font-weight: 900">${msg }</p>
 <form action="<c:url value='/InitializeDB'/>" method="post">

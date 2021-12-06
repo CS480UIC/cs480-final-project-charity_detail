@@ -8,6 +8,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import task.dao.TaskDao;
+import task.domain.Task;
+
 
 /**
  * Servlet implementation class UserServlet
@@ -35,7 +38,27 @@ public class TaskServletRead extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		return;
+		Task task = null;
+		try {
+			task = TaskDao.findByid(request.getParameter("id"));
+		} catch (ClassNotFoundException e1) {
+			e1.printStackTrace();
+		} catch (InstantiationException e1) {
+			e1.printStackTrace();
+		} catch (IllegalAccessException e1) {
+			e1.printStackTrace();
+		}
+		
+		if(task.getId()!=0){
+					System.out.println(task);
+					request.setAttribute("task", task);
+					request.getRequestDispatcher("/jsps/task/task_read_output.jsp").forward(request, response);
+				
+			}
+			else{
+			request.setAttribute("msg", "Entity not found");
+			request.getRequestDispatcher("/jsps/task/task_read_output.jsp").forward(request, response);
+		}
 	}
 }
 

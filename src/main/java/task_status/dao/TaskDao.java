@@ -35,7 +35,7 @@ public class TaskDao {
 			
 			String sql = "insert into task_status values(?,?,?)";
 			PreparedStatement preparestatement = connect.prepareStatement(sql);
-			preparestatement.setLong(1,form.getID());
+			preparestatement.setLong(1,form.getId());
 		    preparestatement.setString(2,form.getStatus());
 		    preparestatement.setString(3,form.getRemark());
 		    preparestatement.executeUpdate();
@@ -126,12 +126,37 @@ public class TaskDao {
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
 		    preparestatement.setString(1,form.getRemark());
 			preparestatement.setString(2,form.getStatus());
-		    preparestatement.setLong(3,form.getID());
+		    preparestatement.setLong(3,form.getId());
 		    preparestatement.executeUpdate();
 		    connect.close();
 		} catch(SQLException e) {
 			throw new RuntimeException(e);
 		}
 	}
+	
+	public static Task findByid(String id) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+		Task task = new Task();
 
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/charity","root", "Root@123");
+		    String sql = "select * from task_status where id=?";
+		    PreparedStatement preparestatement = connect.prepareStatement(sql); 
+		    preparestatement.setString(1,id);
+		    ResultSet resultSet = preparestatement.executeQuery();
+		    //ResultSet resultSet  = preparestatement.executeUpdate();
+		    while(resultSet.next()){
+		    	String user_name = resultSet.getString("id");
+		    	if(user_name.equals(id)){
+		    		task.setId(Integer.parseInt(resultSet.getString("id")));
+		    		task.setStatus(resultSet.getString("status"));
+		    		task.setRemark(resultSet.getString("remark"));
+		    	}
+		    }
+		    connect.close();
+		} catch(SQLException e) {
+			throw new RuntimeException(e);
+		}
+		return task;
+	}	
 }

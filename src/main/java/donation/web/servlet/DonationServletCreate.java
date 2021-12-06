@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import donation.domain.Donation;
+import donation.domain.Task;
 import donation.service.DonationException;
 import donation.service.DonationService;
 
@@ -44,7 +44,7 @@ public class DonationServletCreate extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		DonationService donationservice = new DonationService();
 		Map<String,String[]> paramMap = request.getParameterMap();
-		Donation form = new Donation();
+		Task form = new Task();
 		List<String> info = new ArrayList<String>();
 		System.out.println(form);
 		for(String name : paramMap.keySet()) {

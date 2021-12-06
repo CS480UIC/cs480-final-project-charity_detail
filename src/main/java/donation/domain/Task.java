@@ -4,7 +4,7 @@ package donation.domain;
  * User object
  * @author Judhajit
  */
-public class Donation {
+public class Task {
 	/*
 	 * Correspond to the user table
 	 */

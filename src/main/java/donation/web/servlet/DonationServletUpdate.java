@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import donation.dao.DonationDao;
-import donation.domain.Donation;
+import donation.domain.Task;
 //import entity1.service.Entity1Service;
 
 /**
@@ -44,7 +44,7 @@ public class DonationServletUpdate extends HttpServlet {
 
 		String method = request.getParameter("method");
 		DonationDao donationdao = new DonationDao();
-		Donation donation = null;
+		Task donation = null;
 		
 		if(method.equals("search"))
 		{
@@ -76,7 +76,7 @@ public class DonationServletUpdate extends HttpServlet {
 		else if(method.equals("update"))
 		{
 			Map<String,String[]> paramMap = request.getParameterMap();
-			Donation form = new Donation();
+			Task form = new Task();
 			List<String> info = new ArrayList<String>();
 
 			for(String name : paramMap.keySet()) {

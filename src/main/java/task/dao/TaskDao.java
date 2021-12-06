@@ -6,9 +6,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-
-
-
 //import java.util.ArrayList;
 //import java.util.List;
 
@@ -38,7 +35,7 @@ public class TaskDao {
 		    preparestatement.setString(1,form.getName());
 		    preparestatement.setInt(2,form.getCampaign_id());
 		    preparestatement.setString(3,form.getDescription());
-		    preparestatement.setInt(4,form.getNumPart());
+		    preparestatement.setInt(4,form.getNumber_of_participants());
 		    preparestatement.executeUpdate();
 		    connect.close();
 		} catch(SQLException e) {
@@ -59,8 +56,8 @@ public class TaskDao {
 			System.out.println("Update Executed");
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
 		    preparestatement.setString(1,form.getDescription());
-			preparestatement.setLong(2,form.getNumPart());
-		    preparestatement.setLong(3,form.getID());
+			preparestatement.setLong(2,form.getNumber_of_participants());
+		    preparestatement.setLong(3,form.getId());
 		    preparestatement.executeUpdate();
 		    connect.close();
 		} catch(SQLException e) {
@@ -111,4 +108,33 @@ public class TaskDao {
 			throw new RuntimeException(e);
 		}
 	}
+
+
+	public static Task findByid(String id) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+		Task task = new Task();
+
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/charity","root", "Root@123");
+		    String sql = "select * from task where id=?";
+		    PreparedStatement preparestatement = connect.prepareStatement(sql); 
+		    preparestatement.setString(1,id);
+		    ResultSet resultSet = preparestatement.executeQuery();
+		    //ResultSet resultSet  = preparestatement.executeUpdate();
+		    while(resultSet.next()){
+		    	String user_name = resultSet.getString("id");
+		    	if(user_name.equals(id)){
+		    		task.setId(Integer.parseInt(resultSet.getString("id")));
+		    		task.setName(resultSet.getString("name"));
+		    		task.setCampaign_id(Integer.parseInt(resultSet.getString("campaign_id")));
+		    		task.setDescription(resultSet.getString("description"));
+		    		task.setNumber_of_participants(Integer.parseInt(resultSet.getString("number_of_participants")));
+		    	}
+		    }
+		    connect.close();
+		} catch(SQLException e) {
+			throw new RuntimeException(e);
+		}
+		return task;
+	}	
 }

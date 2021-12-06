@@ -102,6 +102,16 @@
     <servlet-name>TaskServletUpdate</servlet-name>
     <url-pattern>/TaskServletUpdate</url-pattern>
   </servlet-mapping>
+    <servlet>
+    <description></description>
+    <display-name>TaskServletRead</display-name>
+    <servlet-name>TaskServletRead</servlet-name>
+    <servlet-class>task.web.servlet.TaskServletRead</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TaskServletRead</servlet-name>
+    <url-pattern>/TaskServletRead</url-pattern>
+  </servlet-mapping>
   
   <servlet>
     <description></description>
@@ -125,6 +135,18 @@
   <servlet-mapping>
     <servlet-name>TaskStatusServletDelete</servlet-name>
     <url-pattern>/TaskStatusServletDelete</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>TaskStatusServletRead</display-name>
+    <servlet-name>TaskStatusServletRead</servlet-name>
+    
+    <servlet-class>task_status.web.servlet.TaskStatusServletRead</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TaskStatusServletRead</servlet-name>
+    <url-pattern>/TaskStatusServletRead</url-pattern>
   </servlet-mapping>
   
   <servlet>

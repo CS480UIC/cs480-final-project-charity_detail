@@ -2,7 +2,7 @@ package donation.service;
 
 import donation.dao.DonationDao;
 import entity1.dao.Entity1Dao;
-import donation.domain.Donation;
+import donation.domain.Task;
 import donation.service.DonationException;
 
 /**
@@ -15,7 +15,7 @@ public class DonationService {
 	/**
 	 * Register a user
 	 */
-public void create(Donation form) throws DonationException, ClassNotFoundException, InstantiationException, IllegalAccessException{
+public void create(Task form) throws DonationException, ClassNotFoundException, InstantiationException, IllegalAccessException{
 		
 		donationDao.add(form);
 	}
