@@ -55,7 +55,7 @@ public class CampaignServletUpdate extends HttpServlet {
 				info.add(values[0]);
 				System.out.println(name + ": " + Arrays.toString(values));
 			}
-			form.setID(Integer.parseInt(info.get(1)));
+			form.setId(Integer.parseInt(info.get(1)));
 			form.setStatus(info.get(2));
 			form.setRemark(info.get(3));
 
