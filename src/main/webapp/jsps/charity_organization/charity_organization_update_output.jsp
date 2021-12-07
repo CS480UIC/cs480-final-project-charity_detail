@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>charity_organization Create</title>
+    <title>Update Charity Organization</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,11 +21,25 @@
   </head>
   
   <body>
-  <h1>charity_organization Create</h1>
-<form action="<c:url value='/CharityServletCreate'/>" method="post">
-	id:<input type="text" name="id" value="${form.id }"/>
-	<span style="color: red; font-weight: 900">${errors.id }</span>
+  <h1>Update Donation</h1>
+<p style="color: red; font-weight: 900">${msg }</p>
+<form>
+	id:<input type="text" name="id"  value="${charity.id }" disabled/>
 	<br/>
+	
+	name：<input type="text" name="name" value="${charity.name }" disabled/>
+	<br/>
+	cause：<input type="text" name="cause" value="${charity.cause }" disabled/>
+	<br/>
+	address：<input type="text" name="address" value="${charity.address }" disabled/>
+	<br/>
+	target_region_id：<input type="text" name="target_region_id" value="${charity.target_region_id }" disabled/>
+	<br/>
+</form>
+<h1>Update the values below</h1>
+<form action="<c:url value='/CharityServletUpdate'/>" method="post">
+		<input type="hidden" name="method" value="update"/>
+				<input type="hidden" name="id" value="${charity.id }"/>
 	name：<input type="text" name="name" value="${form.name }"/>
 	<span style="color: red; font-weight: 900">${errors.name }</span>
 	<br/>
@@ -38,7 +52,8 @@
 	target_region_id：<input type="text" name="target_region_id" value="${form.target_region_id }"/>
 	<span style="color: red; font-weight: 900">${errors.target_region_id }</span>
 	<br/>
-	<input type="submit" value="Create charity_organization"/>
+	<input type="submit" value="Update Charity"/>
 </form>
-  </body>
+
+</body>
 </html>

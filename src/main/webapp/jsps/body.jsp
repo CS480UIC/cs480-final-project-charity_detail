@@ -22,16 +22,24 @@
   </head>
   
   <body>
+  	
+  	<h1>Project Description</h1>
+  	A fully transparent NGO website that allows for better management and accountability of funds. Allowing for a trustworthy system to check for goal progress and donations.
+
+A collection of charities and donators are registered with the website.
+
+The project uses HTML+JS for the front end. Java + Apache Tomcat for server. MySQL as the DataBase Management System and JDBC as the connector.
+
+There is no transparent NGO website that allows for better management and accountability of funds.
     <h1>Entities in project</h1>
-		<a href="<c:url value='/jsps/task/task_menu.jsp'/>" target="_parent">task</a>
+		<a href="<c:url value='/jsps/task/task_menu.jsp'/>" target="_parent">Task</a>
 		<br>
-		<a href="<c:url value='/jsps/task_status/task_status_menu.jsp'/>" target="_parent">task_status</a>
+		<a href="<c:url value='/jsps/task_status/task_status_menu.jsp'/>" target="_parent">Task Status</a>
 		<br> 
-		<a href="<c:url value='/jsps/campaign/campaign_menu.jsp'/>" target="_parent">campaign</a>
-		<br>
-		<a href="<c:url value='/jsps/donation/donation_menu.jsp'/>" target="_parent">donation</a>
+		
+		<a href="<c:url value='/jsps/donation/donation_menu.jsp'/>" target="_parent">Donation</a>
 		<br> 
-		<a href="<c:url value='/jsps/charity_organization/charity_organization_menu.jsp'/>" target="_parent">charity_organization</a>
+		<a href="<c:url value='/jsps/charity_organization/charity_organization_menu.jsp'/>" target="_parent">Charity Organization</a>
 		<br>
   </body>
 </html>

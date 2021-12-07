@@ -47,7 +47,7 @@
 	Donation Amount:<input type="text" name="donation_amount" value="${form.donation_amount }"/>
 	<span style="color: red; font-weight: 900">${errors.donation_amount }</span>
 	<br/>
-	<input type="submit" value="Update Entity1"/>
+	<input type="submit" value="Update Donation"/>
 </form>
 
 </body>

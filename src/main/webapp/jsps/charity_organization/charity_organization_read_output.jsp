@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Read Entity Output</title>
+    <title>Read Charity Output</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,14 +21,19 @@
   </head>
   
   <body>
-  <h1>Read Entity Output</h1>
+  <h1>Read Charity Output</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
-	User    :<input type="text" name="username" value="${entity1.username }" disabled/>
+	id:<input type="text" name="id"  value="${charity.id }" disabled/>
 	<br/>
-	Password：<input type="text" name="password" value="${entity1.password }" disabled/>
+	
+	name：<input type="text" name="name" value="${charity.name }" disabled/>
 	<br/>
-	Email	：<input type="text" name="email" value="${entity1.email }" disabled/>
+	cause：<input type="text" name="cause" value="${charity.cause }" disabled/>
+	<br/>
+	address：<input type="text" name="address" value="${charity.address }" disabled/>
+	<br/>
+	target_region_id：<input type="text" name="target_region_id" value="${charity.target_region_id }" disabled/>
 	<br/>
 </form>
 

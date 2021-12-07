@@ -22,7 +22,7 @@
   
   <body>
   <h1>Update charity_organization</h1>
-<form action="<c:url value='/Entity1ServletUpdate'/>" method="post">
+<form action="<c:url value='/CharityServletUpdate'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
 	id:<input type="text" name="id" value="${form.id }"/>
 	<span style="color: red; font-weight: 900">${errors.id }</span>

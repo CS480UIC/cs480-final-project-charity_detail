@@ -227,6 +227,49 @@
     <servlet-name>DonationServletUpdate</servlet-name>
     <url-pattern>/DonationServletUpdate</url-pattern>
   </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>CharityServletCreate</display-name>
+    <servlet-name>CharityServletCreate</servlet-name>
+    <servlet-class>charity_organization.web.servlet.CharityServletCreate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CharityServletCreate</servlet-name>
+    <url-pattern>/CharityServletCreate</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>CharityServletDelete</display-name>
+    <servlet-name>CharityServletDelete</servlet-name>
+    <servlet-class>charity_organization.web.servlet.CharityServletDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CharityServletDelete</servlet-name>
+    <url-pattern>/CharityServletDelete</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+    <description></description>
+    <display-name>CharityServletRead</display-name>
+    <servlet-name>CharityServletRead</servlet-name>
+    <servlet-class>charity_organization.web.servlet.CharityServletRead</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CharityServletRead</servlet-name>
+    <url-pattern>/CharityServletRead</url-pattern>
+  </servlet-mapping> 
+  <servlet>
+    <description></description>
+    <display-name>CharityServletUpdate</display-name>
+    <servlet-name>CharityServletUpdate</servlet-name>
+    <servlet-class>charity_organization.web.servlet.CharityServletUpdate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CharityServletUpdate</servlet-name>
+    <url-pattern>/CharityServletUpdate</url-pattern>
+  </servlet-mapping>
   <servlet>
     <description></description>
     <display-name>UserServletLogin</display-name>
