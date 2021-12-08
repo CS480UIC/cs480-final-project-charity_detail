@@ -139,6 +139,18 @@
   
   <servlet>
     <description></description>
+    <display-name>TaskStatusServletUpdate</display-name>
+    <servlet-name>TaskStatusServletUpdate</servlet-name>
+    
+    <servlet-class>task_status.web.servlet.TaskStatusServletUpdate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TaskStatusServletUpdate</servlet-name>
+    <url-pattern>/TaskStatusServletUpdate</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
     <display-name>TaskStatusServletRead</display-name>
     <servlet-name>TaskStatusServletRead</servlet-name>
     

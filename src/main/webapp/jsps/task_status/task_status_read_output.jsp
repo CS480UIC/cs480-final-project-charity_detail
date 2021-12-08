@@ -26,9 +26,9 @@
 <form>
 	ID: <input type="text" name="id" value="${task_status.id }" disabled/>
 	<br/>
-	Name：<input type="text" name="status" value="${task_status.status }" disabled/>
+	Status：<input type="text" name="status" value="${task_status.status }" disabled/>
 	<br/>
-	Campaign ID	：<input type="text" name="remark" value="${task_status.remark }" disabled/>
+	Remark	：<input type="text" name="remark" value="${task_status.remark }" disabled/>
 	<br/>
 </form>
 

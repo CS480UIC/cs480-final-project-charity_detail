@@ -46,6 +46,7 @@ public class TaskStatusServletDelete extends HttpServlet {
 		TaskDao taskdao = new TaskDao();
 		try {
 			taskdao.delete(request.getParameter("id"));
+			response.sendRedirect( request.getContextPath() + "/jsps/main.jsp");
 		} catch (ClassNotFoundException | InstantiationException | IllegalAccessException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
